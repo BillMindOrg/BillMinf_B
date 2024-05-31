@@ -4,8 +4,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import pe.edu.upc.billmind_backend.domain.models.Client;
 
+import java.util.Optional;
+
 @Repository
 public interface ClientRepository extends JpaRepository<Client, Long>
 {
-    Client findByMail(String mail);
+    Optional<Client> findByMail(String mail);
 }

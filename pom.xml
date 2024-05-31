@@ -11,11 +11,18 @@
     <groupId>pe.edu.upc</groupId>
     <artifactId>BillMind_Backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>BillMind_Backend</name>
+    <name>BillMind_Backend</name>f
     <description>BillMind_Backend</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>21</java.version>
     </properties>
+    <distributionManagement>
+        <repository>
+            <id>azure-web-app</id>
+            <name>Azure Web App Repository</name>
+            <url>https://billmindbknd.azurewebsites.net</url>
+        </repository>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -55,6 +62,30 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version> 0.11.5 </version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version> 0.11.5 </version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version> 0.11.5 </version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

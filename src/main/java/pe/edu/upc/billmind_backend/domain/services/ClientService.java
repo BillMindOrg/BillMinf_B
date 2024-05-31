@@ -6,6 +6,7 @@ import pe.edu.upc.billmind_backend.domain.models.Client;
 import pe.edu.upc.billmind_backend.domain.repositories.ClientRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClientService {
@@ -24,7 +25,7 @@ public class ClientService {
         return clientRepository.findById(id).orElse(null);
     }
 
-    public Client getClientByMail(String mail) {
+    public Optional<Client> getClientByMail(String mail) {
         return clientRepository.findByMail(mail);
     }
 
